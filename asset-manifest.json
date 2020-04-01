@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/toastie-splash/static/css/main.d3a94a4f.chunk.css",
-    "main.js": "/toastie-splash/static/js/main.ea7a679c.chunk.js",
-    "main.js.map": "/toastie-splash/static/js/main.ea7a679c.chunk.js.map",
+    "main.css": "/toastie-splash/static/css/main.6f36370c.chunk.css",
+    "main.js": "/toastie-splash/static/js/main.0e2cf0e3.chunk.js",
+    "main.js.map": "/toastie-splash/static/js/main.0e2cf0e3.chunk.js.map",
     "runtime-main.js": "/toastie-splash/static/js/runtime-main.f297e5ac.js",
     "runtime-main.js.map": "/toastie-splash/static/js/runtime-main.f297e5ac.js.map",
     "static/js/2.be92706b.chunk.js": "/toastie-splash/static/js/2.be92706b.chunk.js",
     "static/js/2.be92706b.chunk.js.map": "/toastie-splash/static/js/2.be92706b.chunk.js.map",
     "index.html": "/toastie-splash/index.html",
-    "precache-manifest.9dd3afd951ce1e056cb1bda24be38025.js": "/toastie-splash/precache-manifest.9dd3afd951ce1e056cb1bda24be38025.js",
+    "precache-manifest.6bac1b62798d3cac0ad14bdaf5ada5f3.js": "/toastie-splash/precache-manifest.6bac1b62798d3cac0ad14bdaf5ada5f3.js",
     "service-worker.js": "/toastie-splash/service-worker.js",
-    "static/css/main.d3a94a4f.chunk.css.map": "/toastie-splash/static/css/main.d3a94a4f.chunk.css.map",
+    "static/css/main.6f36370c.chunk.css.map": "/toastie-splash/static/css/main.6f36370c.chunk.css.map",
     "static/js/2.be92706b.chunk.js.LICENSE.txt": "/toastie-splash/static/js/2.be92706b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f297e5ac.js",
     "static/js/2.be92706b.chunk.js",
-    "static/css/main.d3a94a4f.chunk.css",
-    "static/js/main.ea7a679c.chunk.js"
+    "static/css/main.6f36370c.chunk.css",
+    "static/js/main.0e2cf0e3.chunk.js"
   ]
 }

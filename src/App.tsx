@@ -67,7 +67,7 @@ function App(): ReactElement {
                 </div>
                 <div>
                     <h3>Desktop App</h3>
-                    <p>The desktop (organiser) app of this software is available to beta test on this <a href='http://toastie-desktop.s3-website.eu-west-2.amazonaws.com/' target='_blank' rel='noopener noreferrer'>online webpage</a>.</p>
+                    <p>The desktop (organiser) app of this software is available to beta test on this <a href='http://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>online webpage</a>.</p>
                 </div>
                 <div>
                     <h3>Mobile App</h3>
@@ -99,7 +99,7 @@ function App(): ReactElement {
                     <a href='https://aloysiuslip.com' target='_blank' rel='noopener noreferrer'>
                         <img src={process.env.PUBLIC_URL + '/icons/website.png'} />
                     </a>
-                    <a href='http://toastie-desktop.s3-website.eu-west-2.amazonaws.com/' target='_blank' rel='noopener noreferrer'>
+                    <a href='http://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>
                         <img src={process.env.PUBLIC_URL + '/icons/desktop.png'} />
                     </a>
                     <a href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>

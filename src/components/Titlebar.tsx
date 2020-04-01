@@ -1,6 +1,10 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, Dispatch, SetStateAction } from 'react';
 
-export default function Titlebar(): ReactElement {
+export interface TitlebarProps {
+    setID: Dispatch<SetStateAction<string>>
+}
+
+export default function Titlebar(props: TitlebarProps): ReactElement {
 
     const buttons = ['Home', 'Features', 'Preview', 'Downloads', 'About']
 
@@ -17,12 +21,12 @@ export default function Titlebar(): ReactElement {
                 <span className='bold'>Tournament</span> by Oxford Chess Development
             </div>
             <div className='buttonContainer'>
-                {buttons.map((b, i) => <a
+                {buttons.map((b) => <a
                     className='button'
-                    href={'#' + b.toLowerCase()}
+                    onClick={() => props.setID(b)}
                 >
                     {b}
-                </a>)}                    
+                </a>)}              
             </div>
         </div>
     );

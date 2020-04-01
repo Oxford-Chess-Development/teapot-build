@@ -1,30 +1,48 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import './App.css';
-import Titlebar from './components/Titlebar';
+import Titlebar, { TitlebarProps } from './components/Titlebar';
 import TextGallery from './components/TextGallery';
 
+function scrollToID({ id }: { id: string }) {
+
+    window.location.hash = '#' + id.toLowerCase();
+    let body = document.getElementsByTagName('BODY')[0];
+    if (!body) return;
+    let element = document.getElementById('section-' + id.toLowerCase()) as HTMLDivElement;
+    if (!element) return;
+    window.scrollTo({
+        top: element.offsetTop - (window.innerHeight * 0.12),
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
 function App(): ReactElement {
+
+    const [id, setID] = useState('');
+    scrollToID({ id });
+
 	return (
 		<div className='App'>
             
-            <Titlebar />
+            <Titlebar setID={setID} />
 
-            <div id='home' className='section'>
-                <div className='subheader' style={{
+            <div id='section-home' className='section' style={{
                     backgroundColor: '#111111'
-                }}/>
+                }}>
+                <div className='subheader' />
                 <div className='imageWrapper'>
-                    <img className='homeImage' src={process.env.PUBLIC_URL + '/images/cover.jpg'} alt='Tournament by Oxford Chess Development' />
+                    <img className='homeImage' src={process.env.PUBLIC_URL + '/images/cover-plain.jpg'} alt='Tournament by Oxford Chess Development' />
                 </div>
             </div>
 
-            <div id='features' className='section' style={{
-                    backgroundColor: '#2d132c'
+            <div id='section-features' className='section' style={{
+                    backgroundColor: 'rgb(44, 49, 19)'
                 }}>
                 <div className='subheader'>
                     Features
                 </div>
-                <TextGallery autoAdvance={1}>
+                <TextGallery autoAdvance={3000}>
                     <div>
                         <h3>Modern</h3>
                         <p>Built with the latest front-end technologies and constantly updated. Designed to work on any platform, cross-platform. </p>
@@ -40,7 +58,7 @@ function App(): ReactElement {
                 </TextGallery>
             </div>
 
-            <div id='preview' className='section' style={{
+            <div id='section-preview' className='section' style={{
                     backgroundColor: '#2d132c'
                 }}>
                 <div className='subheader'>
@@ -56,26 +74,41 @@ function App(): ReactElement {
                 </div>
             </div>
 
-            <div id='downloads' className='section' style={{
+            <div id='section-downloads' className='section' style={{
                     backgroundColor: 'lilac'
                 }}>
                 <div className='subheader'>
                     Downloads
                 </div>
-                Hello world
-                "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                The Desktop version of this app will be available to download for Windows, Mac, and Debian-based Linux distributions. The mobile client for players will be available on the AppStore and the Google Play Store.
             </div>
-            <div id='about' className='section' style={{
-                    backgroundColor: '#801336'
+            <div id='section-about' className='section' style={{
+                    backgroundColor: 'rgb(80, 5, 5)'
                 }}>
                 <div className='subheader'>
                     About
                 </div>
-                Hello world
-                "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                Aloysius Lip is a 2nd-year undergraduate student at the University of Oxford and the current President of the Oxford University Chess Club. He enjoys programming in his free time.
             </div>
             <div className='footer'>
-                © Aloysius Lip, 2020
+                <div className='icons'>
+                    <a href='https://facebook.com/oxfordchess' target='_blank' rel='noopener noreferrer'>
+                        <img src={process.env.PUBLIC_URL + '/icons/facebook.png'} />
+                    </a>
+                    <a href='https://aloysiuslip.com' target='_blank' rel='noopener noreferrer'>
+                        <img src={process.env.PUBLIC_URL + '/icons/website.png'} />
+                    </a>
+                    <a href='http://toastie-desktop.s3-website.eu-west-2.amazonaws.com/' target='_blank' rel='noopener noreferrer'>
+                        <img src={process.env.PUBLIC_URL + '/icons/desktop.png'} />
+                    </a>
+                    <a href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>
+                        <img src={process.env.PUBLIC_URL + '/icons/mobile.png'} />
+                    </a>
+                    <a href='mailto:aloysius.lip@gmail.com' target='_blank' rel='noopener noreferrer'>
+                        <img src={process.env.PUBLIC_URL + '/icons/email.png'} />
+                    </a>
+                </div>
+                <div className='author'>Copyright 2020, Aloysius Lip</div>
             </div>
 		</div>
 	);

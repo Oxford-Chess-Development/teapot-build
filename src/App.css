@@ -63,6 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .button:link, .button:visited, .button:hover, .button:active {
@@ -91,8 +92,8 @@
 .section {
     position: static;
     box-sizing: border-box;
-    padding: 15vh 20% 5vh;
-    min-height: 70vh;
+    padding: 5vh 20% 5vh;
+    min-height: 50vh;
     
     display: flex;
     flex-direction: column;
@@ -112,6 +113,7 @@
 
 .textGallery {
     justify-items: center;
+    overflow: hidden;
 }
 
 .selection {
@@ -121,10 +123,20 @@
     margin: 10px 0;
 }
 
+.stage {
+    position: relative;
+    left: -100%;
+    transition: left 1s;
+    display: grid;
+    grid-template-columns: 100% 100% 100%;
+    justify-items: center;
+}
+
 .dot {
     height: 15px;
     width: 15px;
     background-color: #bbb;
+    border-width: 2px;
     border-color: black;
     border-style: solid;
     border-radius: 50%;
@@ -134,4 +146,32 @@
 
 .dotSelected {
     background-color: blue;
+}
+
+.footer {
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    max-height: 50px;
+    margin: 20px 0;
+}
+
+.icons > a {
+    margin: 0 10px;
+}
+
+.icons img {
+   height: 50px;
+   filter: invert(1);
+   transition: opacity 0.25s;
+   opacity: 1.0;
+}
+
+.icons img:hover {
+    opacity: 0.5;
 }

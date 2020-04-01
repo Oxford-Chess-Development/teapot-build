@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/toastie-splash/static/css/main.d3a94a4f.chunk.css",
+    "main.js": "/toastie-splash/static/js/main.d1f5bde5.chunk.js",
+    "main.js.map": "/toastie-splash/static/js/main.d1f5bde5.chunk.js.map",
+    "runtime-main.js": "/toastie-splash/static/js/runtime-main.f297e5ac.js",
+    "runtime-main.js.map": "/toastie-splash/static/js/runtime-main.f297e5ac.js.map",
+    "static/js/2.be92706b.chunk.js": "/toastie-splash/static/js/2.be92706b.chunk.js",
+    "static/js/2.be92706b.chunk.js.map": "/toastie-splash/static/js/2.be92706b.chunk.js.map",
+    "index.html": "/toastie-splash/index.html",
+    "precache-manifest.d61d65e2d9b807b034ded0b089eea790.js": "/toastie-splash/precache-manifest.d61d65e2d9b807b034ded0b089eea790.js",
+    "service-worker.js": "/toastie-splash/service-worker.js",
+    "static/css/main.d3a94a4f.chunk.css.map": "/toastie-splash/static/css/main.d3a94a4f.chunk.css.map",
+    "static/js/2.be92706b.chunk.js.LICENSE.txt": "/toastie-splash/static/js/2.be92706b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f297e5ac.js",
+    "static/js/2.be92706b.chunk.js",
+    "static/css/main.d3a94a4f.chunk.css",
+    "static/js/main.d1f5bde5.chunk.js"
+  ]
+}

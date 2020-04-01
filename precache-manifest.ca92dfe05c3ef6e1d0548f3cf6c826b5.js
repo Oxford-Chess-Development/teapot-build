@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "583442e56d2f627f52d84619020e28fb",
+    "revision": "6a00884b76213cc3b6dcf9af48354143",
     "url": "/toastie-splash/index.html"
   },
   {
-    "revision": "9b1d83cee3275508e02f",
-    "url": "/toastie-splash/static/css/main.cce1298f.chunk.css"
+    "revision": "d641105d67250c33757e",
+    "url": "/toastie-splash/static/css/main.39250f88.chunk.css"
   },
   {
     "revision": "3acd040243aaa9567ca2",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/toastie-splash/static/js/2.63a3ada0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9b1d83cee3275508e02f",
-    "url": "/toastie-splash/static/js/main.d7dd2a0a.chunk.js"
+    "revision": "d641105d67250c33757e",
+    "url": "/toastie-splash/static/js/main.4a2ac57d.chunk.js"
   },
   {
     "revision": "bef59675189cc86211ef",

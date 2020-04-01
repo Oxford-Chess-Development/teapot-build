@@ -1,4 +1,4 @@
-import React, { ReactElement, useState, useEffect, useReducer } from 'react';
+import React, { ReactElement, useState, useEffect, useReducer, useCallback } from 'react';
 
 interface TextGalleryProps {
     children?: JSX.Element[]
@@ -26,14 +26,16 @@ export default function TextGallery(props: TextGalleryProps): ReactElement {
         />);
     }
 
-    useEffect(() => {
+    const updateIndex = useCallback(() => {
         if (!props.autoAdvance) return;
         let x: NodeJS.Timeout;
         if (!hasClicked) x = setTimeout(() => setIndex((index + 1) % length), props.autoAdvance);
         return () => {
             clearTimeout(x);
         }
-    }, [index, props.children?.length, props.autoAdvance, hasClicked]);
+    }, [index, length, props.autoAdvance, hasClicked]);
+
+    useEffect(updateIndex, [updateIndex]);
 
     return (
         <div className='textGallery'>

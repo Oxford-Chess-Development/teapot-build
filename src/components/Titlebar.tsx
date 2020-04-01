@@ -17,8 +17,10 @@ export default function Titlebar(props: TitlebarProps): ReactElement {
                     alt='logo'
                 />
             </div>
-            <div className='name'>
-                <span className='bold'>Tournament</span> by Oxford Chess Development
+            <div className='nameWrapper'>
+                <div className='name'>
+                    <span className='bold'>Tournament</span> by Oxford Chess Development
+                </div>
             </div>
             <div className='buttonContainer'>
                 {buttons.map((b) => <a

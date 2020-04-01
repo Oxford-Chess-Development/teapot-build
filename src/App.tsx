@@ -5,7 +5,8 @@ import TextGallery from './components/TextGallery';
 
 function scrollToID({ id }: { id: string }) {
 
-    window.location.hash = '#' + id.toLowerCase();
+    if (id.toLowerCase() === 'home') window.location.hash = '';
+    else window.location.hash = '#' + id.toLowerCase();
     let body = document.getElementsByTagName('BODY')[0];
     if (!body) return;
     let element = document.getElementById('section-' + id.toLowerCase()) as HTMLDivElement;

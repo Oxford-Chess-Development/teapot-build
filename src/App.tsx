@@ -10,9 +10,11 @@ function App(): ReactElement {
             <Titlebar />
 
             <div id='home' className='section'>
-                <div className='subheader' />
-                <div>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                <div className='subheader' style={{
+                    backgroundColor: '#111111'
+                }}/>
+                <div className='imageWrapper'>
+                    <img className='homeImage' src={process.env.PUBLIC_URL + '/images/cover.jpg'} alt='Tournament by Oxford Chess Development' />
                 </div>
             </div>
 

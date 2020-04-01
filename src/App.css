@@ -104,6 +104,10 @@
     font-size: xx-large;
 }
 
+.imageWrapper, .homeImage {
+    width: 100%;
+}
+
 /* Text Gallery */
 
 .textGallery {

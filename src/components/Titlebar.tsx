@@ -8,7 +8,7 @@ export default function Titlebar(): ReactElement {
         <div className='header'>
             <div className='logoWrapper'>
                 <img
-                    src={process.env.PUBLIC_URL + 'images/favicon.png'}
+                    src={process.env.PUBLIC_URL + '/images/favicon.png'}
                     className='logo'
                     alt='logo'
                 />

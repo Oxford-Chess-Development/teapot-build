@@ -38,6 +38,22 @@ function App(): ReactElement {
                 </TextGallery>
             </div>
 
+            <div id='preview' className='section' style={{
+                    backgroundColor: '#2d132c'
+                }}>
+                <div className='subheader'>
+                    Preview
+                </div>
+                <div>
+                    <h3>Desktop App</h3>
+                    <p>The desktop (organiser) app of this software is available to beta test on this <a href='http://toastie-desktop.s3-website.eu-west-2.amazonaws.com/' target='_blank' rel='noopener noreferrer'>online webpage</a>.</p>
+                </div>
+                <div>
+                    <h3>Mobile App</h3>
+                    <p>The design of the mobile (player) app of this software has been published online on <a href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>Figma</a>.</p>
+                </div>
+            </div>
+
             <div id='downloads' className='section' style={{
                     backgroundColor: 'lilac'
                 }}>

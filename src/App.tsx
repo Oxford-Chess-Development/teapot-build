@@ -65,11 +65,18 @@ function App(): ReactElement {
                 <div className='subheader'>
                     Preview
                 </div>
-                <div>
+                <div className='subsection'>
                     <h3>Desktop App</h3>
                     <p>The desktop (organiser) app of this software is available to beta test on this <a href='http://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>online webpage</a>.</p>
+                    <div className='installer'>
+                        <img src={process.env.PUBLIC_URL + '/images/linux.png'} alt='linux' />
+                        <a className='downloadLink' href={process.env.PUBLIC_URL + '/installers/toastie-desktop_0.5.4_amd64.deb'}>
+                            <div className='downloadTitle'>↧ .deb</div>
+                            <div>Debian, Ubuntu</div>
+                        </a>
+                    </div>
                 </div>
-                <div>
+                <div className='subsection'>
                     <h3>Mobile App</h3>
                     <p>The design of the mobile (player) app of this software has been published online on <a href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>Figma</a>.</p>
                 </div>

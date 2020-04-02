@@ -11,7 +11,6 @@ function scrollToID({ id }: { id: string }) {
     if (!body) return;
     let element = document.getElementById('section-' + id.toLowerCase()) as HTMLDivElement;
     if (!element) return;
-    console.log(element.offsetTop, window.innerHeight);
     window.scrollTo({
         top: element.offsetTop - (window.innerHeight * 0.12),
         left: 0,
@@ -76,7 +75,7 @@ function App(): ReactElement {
                     <p>The desktop (organiser) app of this software is available to beta test on this <a href='http://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>online webpage</a>.</p>
                     <div className='installer'>
                         <img src={process.env.PUBLIC_URL + '/images/linux.png'} alt='linux' />
-                        <a className='downloadLink' href={process.env.PUBLIC_URL + '/installers/toastie-desktop_0.5.4_amd64.deb'}>
+                        <a className='downloadLink' href={'http://beta.oxfordchess.co.uk/installers/toastie-desktop_0.5.4_amd64.deb'}>
                             <div className='downloadTitle'>↧ .deb</div>
                             <div>Debian, Ubuntu</div>
                         </a>

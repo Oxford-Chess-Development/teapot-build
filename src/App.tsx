@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useState } from 'react';
+import React, { ReactElement, useEffect, useState, useCallback } from 'react';
 import './App.css';
 import Titlebar, { TitlebarProps } from './components/Titlebar';
 import TextGallery from './components/TextGallery';
@@ -11,6 +11,7 @@ function scrollToID({ id }: { id: string }) {
     if (!body) return;
     let element = document.getElementById('section-' + id.toLowerCase()) as HTMLDivElement;
     if (!element) return;
+    console.log(element.offsetTop, window.innerHeight);
     window.scrollTo({
         top: element.offsetTop - (window.innerHeight * 0.12),
         left: 0,
@@ -20,8 +21,13 @@ function scrollToID({ id }: { id: string }) {
 
 function App(): ReactElement {
 
-    const [id, setID] = useState('');
-    scrollToID({ id });
+    let hash = window.location.hash.slice(1);
+    const [id, setID] = useState(hash);
+    let body = document.getElementsByTagName('BODY')[0];
+
+    useEffect(() => {
+        scrollToID({ id })
+    }, [id, body]);
 
 	return (
 		<div className='App'>

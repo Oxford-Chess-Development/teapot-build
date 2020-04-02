@@ -75,7 +75,7 @@ function App(): ReactElement {
                     <p>The desktop (organiser) app of this software is available to beta test on this <a href='http://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>online webpage</a>.</p>
                     <div className='installer'>
                         <img src={process.env.PUBLIC_URL + '/images/linux.png'} alt='linux' />
-                        <a className='downloadLink' href={'http://beta.oxfordchess.co.uk/installers/toastie-desktop_1.0.0_amd64.deb'}>
+                        <a className='downloadLink' href={'http://repo.oxfordchess.co.uk/ubuntu/toastie-desktop_1.1.0_amd64.deb'}>
                             <div className='downloadTitle'>↧ .deb</div>
                             <div>Debian, Ubuntu</div>
                         </a>
@@ -86,15 +86,7 @@ function App(): ReactElement {
                     <p>The design of the mobile (player) app of this software has been published online on <a href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>Figma</a>.</p>
                 </div>
             </div>
-
-            <div id='section-downloads' className='section' style={{
-                    backgroundColor: 'lilac'
-                }}>
-                <div className='subheader'>
-                    Downloads
-                </div>
-                The Desktop version of this app will be available to download for Windows, Mac, and Debian-based Linux distributions. The mobile client for players will be available on the AppStore and the Google Play Store.
-            </div>
+            
             <div id='section-about' className='section' style={{
                     backgroundColor: 'rgb(80, 5, 5)'
                 }}>

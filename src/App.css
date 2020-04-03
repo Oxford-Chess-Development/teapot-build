@@ -77,6 +77,10 @@
     height: 100px;
 }
 
+a.mobile {
+    background-color: darkgreen;
+}
+
 .downloadLink {
     background-color: deepskyblue;
     height: 50px;
@@ -96,10 +100,19 @@
     font-weight: bold;
 }
 
-.a:link, .a:visited, .a:hover, .a:active {
+a:link, a:visited, a:hover, a:active {
     color: white;
     text-emphasis: none;
     text-decoration: none;
+}
+
+a.inlineLink:link, a.inlineLink:visited, a.inlineLink:hover, a.inlineLink:active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+li {
+    text-align: left;
 }
 
 .bold {

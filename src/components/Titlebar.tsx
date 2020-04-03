@@ -24,14 +24,14 @@ export default function Titlebar(props: TitlebarProps): ReactElement {
             </div>
             <div className='buttonContainer'>
                 {buttons.map((b) => {
-                    if (b === 'Downloads') return <a
+                    /*if (b === 'Downloads') return <a
                         className='button'
                         href='http://repo.oxfordchess.co.uk'
                         target='_blank'
                         rel='nooopener noreferrer'
                     >
                         {b}
-                    </a>
+                    </a>*/
                     return <a
                         className='button'
                         onClick={() => props.setID(b)}

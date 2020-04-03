@@ -113,7 +113,7 @@ function App(): ReactElement {
                 </div>
                 <div className='subsection'>
                     <h3>Mobile App</h3>
-                    <p>The design of the mobile (player) app of this software has been published online on <a href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>Figma</a>.</p>
+                    <p>The design of the mobile (player) app of this software has been published online on <a className='inlineLink' href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>Figma</a>.</p>
                     <div className='installer'>
                         <a className='downloadLink mobile' href={'https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile'}>
                             <div>View mobile design</div>

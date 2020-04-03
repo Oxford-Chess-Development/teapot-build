@@ -106,6 +106,10 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+a.inlineLink {
+    display: inline-block;
+}
+
 a.inlineLink:link, a.inlineLink:visited, a.inlineLink:hover, a.inlineLink:active {
     font-weight: bold;
     text-decoration: underline;
@@ -221,13 +225,18 @@ li {
     margin: 0 10px;
 }
 
-.icons img {
-   height: 50px;
-   filter: invert(1);
-   transition: opacity 0.25s;
-   opacity: 1.0;
+.icons > a > svg, .icons > a > svg > *, .icons > a > img {
+    width: 50px;
+    height: 50px;
+    color: white;
+    transition: opacity 0.25s;
+    opacity: 1.0;
 }
 
-.icons img:hover {
+.icons > a > img {
+    filter: invert(1);
+}
+
+.icons > a > svg:hover, .icons > a > img:hover {
     opacity: 0.5;
 }

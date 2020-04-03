@@ -24,6 +24,14 @@ export default function Titlebar(props: TitlebarProps): ReactElement {
             </div>
             <div className='buttonContainer'>
                 {buttons.map((b) => {
+                    if (b === 'Preview') return <a
+                        className='button'
+                        href='http://beta.oxfordchess.co.uk'
+                        target='_blank'
+                        rel='nooopener noreferrer'
+                    >
+                        {b}
+                    </a>
                     /*if (b === 'Downloads') return <a
                         className='button'
                         href='http://repo.oxfordchess.co.uk'

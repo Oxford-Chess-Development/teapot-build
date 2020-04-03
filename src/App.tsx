@@ -2,6 +2,7 @@ import React, { ReactElement, useEffect, useState, useCallback } from 'react';
 import './App.css';
 import Titlebar, { TitlebarProps } from './components/Titlebar';
 import TextGallery from './components/TextGallery';
+import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 function scrollToID({ id }: { id: string }) {
 
@@ -64,7 +65,7 @@ function App(): ReactElement {
                 </TextGallery>
             </div>
 
-            <div id='section-preview' className='section' style={{
+            {/*<div id='section-preview' className='section' style={{
                     backgroundColor: 'rgb(155, 40, 0)'
                 }}>
                 <div className='subheader'>
@@ -84,7 +85,7 @@ function App(): ReactElement {
                         <p>Tournament seeks to place everything right where you expect. Any feature you might be looking for there is there, right when you need it.</p>
                     </div>
                 </TextGallery>
-            </div>
+            </div>*/}
 
             <div id='section-downloads' className='section' style={{
                     backgroundColor: '#2d132c'
@@ -133,19 +134,22 @@ function App(): ReactElement {
                 <div className='subheader'>
                     About
                 </div>
-                Aloysius Lip is a 2nd-year undergraduate student at the University of Oxford and the current President of the Oxford University Chess Club. He reads Philosophy, Politics, and Economics, specialising in Microeconomics, Public Economics, and Game Theory. He enjoys programming in his free time, having won the "OxfordHack" international coding competition in 2018. His previous projects in the world of chess development have included:
+                <p>Aloysius Lip is a 2nd-year undergraduate student at the University of Oxford and the current President of the Oxford University Chess Club. He reads Philosophy, Politics, and Economics, specialising in Microeconomics, Public Economics, and Game Theory. He enjoys programming in his free time, having won the "OxfordHack" international coding competition in 2018. His previous projects in the world of chess development have included:</p>
                 <ul>
                     <li><a className='inlineLink' href='http://users.ox.ac.uk/~chess' target='_blank' rel='noopener noreferrer'>Oxford University Chess Club</a> - the official website for the university society</li>
                     <li><a className='inlineLink' href='https://npmjs.com/package/ecf' target='_blank' rel='noopener noreferrer'>ECF.JS</a> - the JavaScript wrapper for the ECF grading database that makes it really easy to download rating data from the ECF for any player or club</li>
                     <li><a className='inlineLink' href='https://npmjs.com/package/lichess' target='_blank' rel='noopener noreferrer'>Lichess.JS</a> - the JavaScript wrapper for the Lichess API</li>
                     <li><a className='inlineLink' href='https://github.com/theLAZYmd/LAZYbot' target='_blank' rel='noopener noreferrer'>LAZYbot</a> - a Discord bot designed for chess servers</li>
                 </ul>
-                Leave any feedback from the beta deployment of Tournament on <a className='inlineLink' href='https://github.com/Oxford-Chess-Development/toastie-desktop-build/issues' target='_blank' rel='noopener noreferrer'>GitHub</a>. It's super easy to make a GitHub account and you can track the progress on your requests as they're handled! Alternatively, contact Aloysius using one of the below links.
+                <p>Leave any feedback from the beta deployment of Tournament on <a className='inlineLink' href='https://github.com/Oxford-Chess-Development/toastie-desktop-build/issues' target='_blank' rel='noopener noreferrer'>GitHub</a>. It's super easy to make a GitHub account and you can track the progress on your requests as they're handled! Alternatively, contact Aloysius using one of the below links.</p>
             </div>
             <div className='footer'>
                 <div className='icons'>
                     <a href='https://facebook.com/oxfordchess' target='_blank' rel='noopener noreferrer'>
-                        <img src={process.env.PUBLIC_URL + '/icons/facebook.png'} />
+                        <FaFacebook />
+                    </a>
+                    <a href='https://linkedin.com/in/aloysiuslip' target='_blank' rel='noopener noreferrer'>
+                        <FaLinkedin />
                     </a>
                     <a href='https://aloysiuslip.com' target='_blank' rel='noopener noreferrer'>
                         <img src={process.env.PUBLIC_URL + '/icons/website.png'} />

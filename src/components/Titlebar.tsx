@@ -30,7 +30,7 @@ export default function Titlebar(props: TitlebarProps): ReactElement {
                             className='button'
                             href='http://beta.oxfordchess.co.uk'
                             target='_blank'
-                            rel='nooopener noreferrer'
+                            rel='noopener noreferrer'
                         >
                             {b}
                         </a>

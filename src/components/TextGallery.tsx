@@ -18,6 +18,7 @@ export default function TextGallery(props: TextGalleryProps): ReactElement {
     let children = props.children || []
     for (let i = 0; i < children.length; i++) {
         dots.push(<span
+            key={['textGallery', 'dot', i].join('.')}
             className={['dot', i === index ? 'dotSelected' : ''].join(' ')}
             onClick={() => {
                 setIndex(i);
@@ -42,7 +43,7 @@ export default function TextGallery(props: TextGalleryProps): ReactElement {
             <div className='stage' style={{
                 left: `calc(-100% * ${index})`
             }}>
-                {children.map(c => <div>{c}</div>)}
+                {children.map((c, i) => <div key={['textGallery', 'child', i].join('.')}>{c}</div>)}
             </div>
             <div className='selection'>
                 {dots}

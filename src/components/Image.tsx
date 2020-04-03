@@ -7,7 +7,7 @@ import { PhotoProps } from 'react-photo-gallery';
 import styles from '../css/components.module.css';
 import url from 'url';
 
-interface Image {
+interface Image extends PhotoProps {
 	source: string
     src: string
     srcSet: string
@@ -18,7 +18,7 @@ interface Image {
     index: number
 }
 
-export interface AlbumProps extends PhotoProps {
+export interface AlbumProps {
 	type: 'carousel' | 'grid'
 	enableLightbox: boolean
 
@@ -30,11 +30,13 @@ export interface AlbumProps extends PhotoProps {
 	interval?: number
 	transitionTime?: number
 	centerMode?: boolean
-	dynamicHeight?: boolean
+    dynamicHeight?: boolean
+    startIndex?: number
 
 	margin?: number
 	targetRowHeight?: number
     ratio: number[]
+    height?: number
 }
 
 export default function Album(props: AlbumProps) {
@@ -51,7 +53,7 @@ export default function Album(props: AlbumProps) {
 		};
 	}, [props.ratio])
 
-	const [currentImage, setCurrentImage] = useState(0);
+	const [currentImage, setCurrentImage] = useState(props.startIndex || 0);
 	const [viewerIsOpen, setViewerIsOpen] = useState(false);
 	const [photos, setPhotos] = useState(props.photos.map(mapToPhoto));
 

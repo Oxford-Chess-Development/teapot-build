@@ -1,8 +1,9 @@
-import React, { ReactElement, useEffect, useState, useCallback } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import './App.css';
-import Titlebar, { TitlebarProps } from './components/Titlebar';
+import Titlebar from './components/Titlebar';
 import TextGallery from './components/TextGallery';
 import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import Album from './components/Image';
 
 function scrollToID({ id }: { id: string }) {
 
@@ -38,9 +39,20 @@ function App(): ReactElement {
                     backgroundColor: '#111111'
                 }}>
                 <div className='subheader' />
-                <div className='imageWrapper'>
-                    <img className='homeImage' src={process.env.PUBLIC_URL + '/images/cover-plain.jpg'} alt='Tournament by Oxford Chess Development' />
-                </div>
+                <Album
+                    type='carousel'
+                    enableLightbox={true}
+                    photos={[
+                        '/images/cover-plain.jpg',
+                        '/screenshots/login_1.gif',
+                        '/screenshots/load_1.gif',
+                        '/screenshots/settings_1.gif',
+                        '/screenshots/desktop_1.1.0_1.png'
+                    ]}
+                    ratio={[16, 9]}
+                    height={600}
+                    interval={10000}
+                />
             </div>
 
             <div id='section-features' className='section' style={{
@@ -48,6 +60,21 @@ function App(): ReactElement {
                 }}>
                 <div className='subheader'>
                     Features
+                </div>
+                <div className='subsection'>
+                    <ul>
+                        <li>Fully-featured Desktop app for instant and intuitive results and pairing management</li>
+                        <li>Lightning-fast swiss system implementation</li>
+                        <li><span className='bold'>Mobile app</span> allowing players to submit their results themselves</li>
+                    </ul>
+                <div style={{width: '100%', display: 'flex'}}>And many more standard functions that make your life easier, like:</div>
+                    <ul>
+                        <li>Support for both teams and individuals</li>
+                        <li>Match points and game points submission</li>
+                        <li>Support for players joining and leaving tournaments</li>
+                        <li>Changing points scored for wins, losses, draws, and byes</li>
+                        <li>Performance rating and 'expected score' calculators via the ELO and FIDE systems</li>
+                    </ul>
                 </div>
                 <TextGallery autoAdvance={3000}>
                     <div>
@@ -113,7 +140,14 @@ function App(): ReactElement {
                 </div>
                 <div className='subsection'>
                     <h3>Mobile App</h3>
-                    <p>The design of the mobile (player) app of this software has been published online on <a className='inlineLink' href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>Figma</a>.</p>
+                    <p>The design of the mobile (player) app of this software has been published online on <a className='inlineLink' href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>Figma</a>. Designed to streamline every part of tournament organisation. Features:</p>
+                    <ul>
+                        <li><span className='bold'>Results submission</span> - let your players fill in the results for you. The app verifies that they both agree on the result and it gets entered into your record! You can confirm it, of course.</li>
+                        <li><span className='bold'>Beam information to your players!</span> - send them round times, announcements, notifications wherever they are so that they're never late for a round again!</li>
+                        <li><span className='bold'>Personalised player view</span> - players can see exactly who their opponents are, what board they're playing on, what room, their colour, and so on</li>
+                        <li><span className='bold'>Chat function</span> - do players have a problem? Now they can just message you immediately through the app. You can refer them onto an FAQ or send them a personalised response!</li>
+                        <li><span className='bold'>Automatic results submission!</span> - playing online or have a PGN stream of their game? On Lichess.org, Chess.com, or Chess24? Just enter that into the results pairing list and Tournament will pick up the results when its over and add it to your record (coming soon).</li>
+                    </ul>
                     <div className='installer'>
                         <a className='downloadLink mobile' href={'https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile'}>
                             <div>View mobile design</div>
@@ -152,16 +186,16 @@ function App(): ReactElement {
                         <FaLinkedin />
                     </a>
                     <a href='https://aloysiuslip.com' target='_blank' rel='noopener noreferrer'>
-                        <img src={process.env.PUBLIC_URL + '/icons/website.png'} />
+                        <img src={process.env.PUBLIC_URL + '/icons/website.png'} alt='website'/>
                     </a>
                     <a href='http://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>
-                        <img src={process.env.PUBLIC_URL + '/icons/desktop.png'} />
+                        <img src={process.env.PUBLIC_URL + '/icons/desktop.png'} alt='desktop-beta'/>
                     </a>
                     <a href='https://www.figma.com/file/74z1QM0ZdtdF2TrKiiAiFj/toastie-mobile' target='_blank' rel='noopener noreferrer'>
-                        <img src={process.env.PUBLIC_URL + '/icons/mobile.png'} />
+                        <img src={process.env.PUBLIC_URL + '/icons/mobile.png'} alt='mobile-design'/>
                     </a>
                     <a href='mailto:aloysius.lip@gmail.com' target='_blank' rel='noopener noreferrer'>
-                        <img src={process.env.PUBLIC_URL + '/icons/email.png'} />
+                        <img src={process.env.PUBLIC_URL + '/icons/email.png'} alt='email'/>
                     </a>
                 </div>
                 <div className='author'>Copyright 2020, Aloysius Lip</div>

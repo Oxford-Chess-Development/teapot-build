@@ -47,6 +47,7 @@ function App(): ReactElement {
                         '/screenshots/login_1.gif',
                         '/screenshots/load_1.gif',
                         '/screenshots/settings_1.gif',
+                        '/screenshots/round_1.gif',
                         '/screenshots/desktop_1.1.0_1.png'
                     ]}
                     ratio={[16, 9]}

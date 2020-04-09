@@ -2,7 +2,7 @@ import React, { ReactElement, useEffect, useState } from 'react';
 import './App.css';
 import Titlebar from './components/Titlebar';
 import TextGallery from './components/TextGallery';
-import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Album from './components/Image';
 
 function scrollToID({ id }: { id: string }) {
@@ -182,6 +182,9 @@ function App(): ReactElement {
                 <div className='icons'>
                     <a href='https://facebook.com/oxfordchess' target='_blank' rel='noopener noreferrer'>
                         <FaFacebook />
+                    </a>
+                    <a href='https://twitter.com/ChessOxford' target='_blank' rel='noopener noreferrer'>
+                        <FaTwitter />
                     </a>
                     <a href='https://linkedin.com/in/aloysiuslip' target='_blank' rel='noopener noreferrer'>
                         <FaLinkedin />

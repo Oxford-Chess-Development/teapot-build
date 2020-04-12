@@ -9,6 +9,7 @@
 		"react-images": "^1.1.0",
 		"react-photo-gallery": "^8.0.0",
 		"react-responsive-carousel": "^3.1.51",
+		"react-router": "^5.1.2",
 		"react-scripts": "3.4.1"
 	},
 	"homepage": "https://oxfordchess.co.uk/",
@@ -24,7 +25,8 @@
 		"typescript": "~3.7.2"
 	},
 	"scripts": {
-		"start": "react-scripts start",
+		"start": "PORT=3002 react-scripts start",
+		"start-win": "set PORT=3002 && react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",

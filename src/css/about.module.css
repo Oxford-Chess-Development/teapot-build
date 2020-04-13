@@ -5,8 +5,12 @@
 	flex-direction: column;
 }
 
+.container:global(#story) {
+	background-color: rgba(80, 5, 5, 0.8);
+}
+
 .container:global(#author) {
-	background-color: rgba(80, 5, 5, 0.9);
+	background-color: rgba(5, 5, 40, 0.4);
 }
 
 .container:global(#development) {
@@ -18,7 +22,7 @@
 }
 
 
-.container > * {
+.container > div {
 	width: 100%;
 	max-width: 980px;
 	margin: 20px 0;
@@ -40,4 +44,23 @@
 
 .subtitle {
 	font-weight: lighter;
+}
+
+.leftQuote {
+	position: absolute;
+	font-size: 50px;
+	left: -2ch;
+	top: -0.5em;
+}
+
+.rightQuote {
+	position: absolute;
+	font-size: 50px;
+	right: -2ch;
+	bottom: -0.5em;
+}
+
+.signature {
+	filter: invert(1.0) grayscale(100%) brightness(100) contrast(500%);
+	height: 100px;
 }

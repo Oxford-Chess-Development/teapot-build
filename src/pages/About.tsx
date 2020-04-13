@@ -1,10 +1,24 @@
 import React from 'react';
 import { ReactElement } from 'react';
 import styles from '../css/about.module.css';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { signature } from './signature';
 
 export default function About(): ReactElement {
 
 	return <>
+		<section id='story' className={styles.container}>
+			<a href='#story' className={styles.title}>
+				Story
+			</a>
+			<div className='quote'>
+				<FaQuoteLeft className={styles.leftQuote} />
+				<p>As a keen chess player myself and having organised many a chess tournament for the university club, I often found myself frustrated. Any existing software is too outdated, never user-friendly, especially to non-professionals, and simply lacking in ideas. When I first joined the club, we tried to resurrect the annual 'Cuppers' tournament, an afternoon amateur college rapidplay. The competition was nearly derailed by slow pairing times. There is so much technology available to us and its all so powerful. We shouldn't have to be stuck in the boring logistics which distract from the incredible game that is chess.</p>
+				<p>Tournament modernises organising tournaments and make the whole process easy and enjoyable. I've created a platform that's easy to use, filled with features, and innovative, using the latest in app and website technology to its fullest potential. Chess players shouldn't have to settle for anything less.</p>
+				<FaQuoteRight className={styles.rightQuote} />
+			</div>
+			<img className={styles.signature} src={signature} alt='signature' />
+		</section>
 		<section id='author' className={styles.container}>
 			<a href='#author' className={styles.title}>
 				About the author

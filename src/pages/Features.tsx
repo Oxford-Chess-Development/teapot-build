@@ -1,31 +1,10 @@
 import React from 'react';
 import TextGallery from '../components/TextGallery';
-import Album from '../components/Image';
 
 export default function Features() {
 
 	return (
-		<div>
-			<section id='section-demo' className='section' style={{
-				backgroundColor: 'lightblue'
-			}}>
-                <div className='subheader' />
-                <Album
-                    type='carousel'
-                    enableLightbox={true}
-                    photos={[
-                        '/images/cover-plain.jpg',
-                        '/screenshots/login_1.gif',
-                        '/screenshots/load_1.gif',
-                        '/screenshots/settings_1.gif',
-                        '/screenshots/round_1.gif',
-                        '/screenshots/desktop_1.1.0_1.png'
-                    ]}
-                    ratio={[16, 9]}
-                    height={600}
-                    interval={10000}
-                />
-            </section>
+		<>
 			<section id='section-features' className='section' style={{
 				backgroundColor: '#1b300e'
 			}}>
@@ -62,6 +41,6 @@ export default function Features() {
 					</div>
 				</TextGallery>
 			</section>
-		</div>
+		</>
 	);
 }

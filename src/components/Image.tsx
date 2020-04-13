@@ -87,7 +87,6 @@ export default function Album(props: AlbumProps) {
 					emulateTouch={true}
 					axis={props.axis || 'horizontal'}
 					autoPlay={props.autoPlay !== false}
-					width={'100%'}
 					selectedItem={props.selectedItem || 0}
 					showThumbs={props.showThumbs !== false}
 					interval={props.interval || 4000}
@@ -125,4 +124,34 @@ export default function Album(props: AlbumProps) {
 			) : null}
 		</div>
 	);
+}
+
+interface ImgProps {
+	src: string
+	alt: string
+}
+
+export function Img(props: ImgProps) {
+
+	const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+	return (
+		<div onClick={() => setViewerIsOpen(!viewerIsOpen)}>
+			<img {...props} width='100%' />
+			<ModalGateway>
+				{!viewerIsOpen ?  null : (
+					<Modal onClose={() => setViewerIsOpen(false)}>
+						<Lightbox
+							currentIndex={0}
+							views={[
+								Object.assign({}, props, {
+									source: props.src
+								})
+							]}
+						/>
+					</Modal>
+				)}
+			</ModalGateway>
+		</div>
+	)
 }

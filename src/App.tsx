@@ -1,19 +1,19 @@
-import React, { ReactElement, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import React, { ReactElement, useEffect, useState, Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect, RouteComponentProps } from 'react-router-dom';
 import './App.css';
 import Titlebar from './components/Titlebar';
-import TextGallery from './components/TextGallery';
-import Album from './components/Image';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Products from './pages/Products';
 import Downloads from './pages/Downloads';
 import Features from './pages/Features';
 import About from './pages/About';
+import { StaticContext } from 'react-router';
 
-function scrollToID({ id }: { id: string }) {
+export function scrollToID( id: string) {
     let body = document.getElementsByTagName('BODY')[0];
     if (!body) return;
-    let element = document.getElementById('section-' + id.toLowerCase()) as HTMLDivElement;
+    let element = document.getElementById(id.toLowerCase()) as HTMLDivElement;
     if (!element) return;
     window.scrollTo({
         top: element.offsetTop - (window.innerHeight * 0.12),
@@ -22,6 +22,15 @@ function scrollToID({ id }: { id: string }) {
     });
 }
 
+const routes = ['Products', 'Features', 'Downloads', 'About'];
+const components = {
+	home: Home,
+	products: Products,
+	features: Features,
+	downloads: Downloads,
+	about: About
+} as {[key: string]: (props?: RouteComponentProps<any, StaticContext, any>) => ReactElement}
+
 function App(): ReactElement {
 
     let hash = window.location.hash.slice(1);
@@ -29,25 +38,24 @@ function App(): ReactElement {
     let body = document.getElementsByTagName('BODY')[0];
 
     useEffect(() => {
-        scrollToID({ id })
+        scrollToID(id)
 	}, [id, body]);
 
 	return <>
 		<Router basename={process.env.PUBLIC_URL}>
 			<div className='App'>
-				<Titlebar setID={setID} />
+				<Titlebar setID={setID} routes={routes} />
 				<div className='main'>
 						<Route render={({location}) => {
 							return (
 								<Switch location={location}>
-									<Route exact path='/' component={Home} />
-									<Route exact path='/home' render={(props) => <Redirect to={{
-										pathname: '/',
-										state: props.history.location.state
-									}} />} />
-									<Route exact path='/features' component={Features} />
-									<Route exact path='/downloads' component={Downloads} />
-									<Route exact path='/about' component={About} />
+									<Route exact path='/' render={(props) => <Home />} />
+									{routes.map((r) => {
+										return <Route exact path={'/' + r.toLowerCase()} render={(props) => {
+											let Elem = components[r.toLowerCase()];
+											return <Elem {...props} />;
+										}} />
+									})}
 									<Route path='*' render={() => null} status={404} />
 								</Switch>
 							);

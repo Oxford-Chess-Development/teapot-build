@@ -79,3 +79,9 @@
         grid-column-gap: 0%;
     }
 }
+
+.header a:link, .header a:visited, .header a:hover, .header a:active {
+    color: white;
+    text-emphasis: none;
+    text-decoration: none;
+}

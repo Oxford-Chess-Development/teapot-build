@@ -14,10 +14,7 @@ export default function Footer(): ReactElement {
 				<a href='https://twitter.com/ChessOxford' target='_blank' rel='noopener noreferrer'>
 					<FaTwitter />
 				</a>
-				<a href='https://linkedin.com/in/aloysiuslip' target='_blank' rel='noopener noreferrer'>
-					<FaLinkedin />
-				</a>
-				<a href='https://aloysiuslip.com' target='_blank' rel='noopener noreferrer'>
+				<a href='https://results.oxfordchess.co.uk' target='_blank' rel='noopener noreferrer'>
 					<img src={process.env.PUBLIC_URL + '/icons/website.png'} alt='website'/>
 				</a>
 				<a href='http://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>

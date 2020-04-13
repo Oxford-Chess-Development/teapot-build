@@ -1,0 +1,63 @@
+.container {
+	display: flex;
+	align-items: center;
+	padding: 50px;
+	flex-direction: column;
+}
+
+.container > * {
+	max-width: 980px;
+}
+
+.container a:link, .container a:visited, .container a:hover, .container a:active {
+	color: inherit;
+	font-weight: bold;
+	text-emphasis: none;
+    text-decoration: none;
+}
+
+.container:global(#tournament-director) {
+	background-color: rgba(11, 11, 11, 0.68);
+	text-shadow: 1px 1px 2px black;
+}
+
+.container:global(#results) {
+	background-color: rgba(135, 206, 235, 0.95);
+	color: black;
+}
+
+.container:global(#mobile) {
+	background-color: rgba(0, 94, 55, 0.8);
+	color: white;
+}
+
+.container:global(#workflow) {
+	background-color: rgba(255, 159, 159, 0.85);
+	color: black;
+}
+
+.carousel {
+	margin: 20px 0;
+}
+
+.carousel div:global(.carousel) li:global(.slide) {
+	background: transparent;
+}
+
+.verticalCarousel div:global(.carousel-slider) {
+	max-width: 240px;
+}
+
+.title {
+	font-size: xx-large;
+	font-weight: bolder;
+	margin: 5px 0;
+}
+
+.subtitle {
+	font-weight: lighter;
+}
+
+.container:global(#results) .subtitle, .container:global(#mobile) .subtitle {
+	font-weight: 300;
+}

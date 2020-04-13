@@ -4,12 +4,11 @@ import { isMobile } from '../utils/auth';
 import styles from '../css/titlebar.module.css';
 
 export interface TitlebarProps {
-    setID: Dispatch<SetStateAction<string>>
+	setID: Dispatch<SetStateAction<string>>
+	routes: string[]
 }
 
 export default function Titlebar(props: TitlebarProps): ReactElement {
-
-    const buttons = ['Home', 'Features', 'Preview', 'Downloads', 'About']
 
     return (
         <div className={styles.header}>
@@ -22,12 +21,19 @@ export default function Titlebar(props: TitlebarProps): ReactElement {
             </div>
             {isMobile() ? null : <>
                 <div className={styles.nameWrapper}>
-                    <div className={styles.name}>
+					<Link 
+						to={{
+							pathname: '/',
+							state: {
+								from: window.location.pathname
+							}
+						}}
+						className={styles.name}>
                         <span className={'bold'}>Tournament</span> by Oxford Chess Development
-                    </div>
+                    </Link>
                 </div>
                 <div className={styles.buttonContainer}>
-                    {buttons.map((b, i) => {
+                    {props.routes.map((b, i) => {
                         if (b === 'Preview') return <a
 							key={[b, i].join('.')}
                             className={styles.button}

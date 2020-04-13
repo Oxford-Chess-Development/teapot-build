@@ -4,7 +4,7 @@
 
     width: 100%;
     height: 12vh;
-    z-index: 3; /* On account on react-carousel */
+    z-index: 4; /* On account on react-carousel */
     background-color: #002147;
 	color: white;
 
@@ -39,6 +39,41 @@
     height: inherit;
 }
 
+.menuButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 5vh;
+}
+
+.mobileMenu {
+	background-color: rgba(0, 0, 0, 0.95);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 3;
+	overflow: hidden;
+	transition: max-height 0.5s ease;
+}
+
+.mobileMenu a {
+	color: white;
+    text-emphasis: none;
+	text-decoration: none;
+	border-bottom: rgba(255, 255, 255, 0.8) solid 2px;
+	padding: 20px;
+	width: 80%;
+}
+
+.mobileMenu hr {
+	background-color: white;
+	width: 80%;
+	height: 5px;
+}
+
 .buttonContainer {
     display: grid;
     grid-auto-columns: 1fr;
@@ -53,7 +88,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+	cursor: pointer;
+	font-weight: 600;
 }
 
 .header .nameWrapper {

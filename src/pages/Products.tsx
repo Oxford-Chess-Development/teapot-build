@@ -57,6 +57,9 @@ export default function Products() {
 						Linux
 					</a>
 				</div>
+				<a href='http://repo.oxfordchess.co.uk' target='_blank' rel='noopener noreferrer' className={styles.subtitle}>
+					View all downloads
+				</a>
 			</section>
 			<section id='results' className={styles.container}>
 				<a href='#results' className={styles.title}>
@@ -96,7 +99,7 @@ export default function Products() {
 					Mobile
 				</a>
 				<div className={styles.subtitle}>
-					Universal web view for results and pairings. Attractive. Automated. Effortless.
+					Your companion to real-life tournaments. Send messages to any player, anywhere.
 				</div>
 				<div className={[styles.carousel, styles.verticalCarousel].join(' ')}>
 					<Album

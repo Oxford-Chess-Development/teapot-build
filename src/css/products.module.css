@@ -54,7 +54,7 @@
 	margin: 5px 0;
 }
 
-.subtitle {
+div:global(.main) .container > .subtitle {
 	font-weight: lighter;
 }
 

@@ -1,7 +1,8 @@
-import React, { ReactElement, Dispatch, SetStateAction } from 'react';
+import React, { ReactElement, Dispatch, SetStateAction, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { isMobile } from '../utils/auth';
 import styles from '../css/titlebar.module.css';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export interface TitlebarProps {
 	setID: Dispatch<SetStateAction<string>>
@@ -10,7 +11,9 @@ export interface TitlebarProps {
 
 export default function Titlebar(props: TitlebarProps): ReactElement {
 
-    return (
+	const [mobileMenu, setMenu] = useState(false);
+
+    return <>
         <div className={styles.header}>
             <div className={styles.logoWrapper}>
                 <img
@@ -19,7 +22,9 @@ export default function Titlebar(props: TitlebarProps): ReactElement {
                     alt='logo'
                 />
             </div>
-            {isMobile() ? null : <>
+            {isMobile() ? <div className={styles.menuButton} onClick={() => setMenu(!mobileMenu)}>
+					<GiHamburgerMenu />
+				</div> : <>
                 <div className={styles.nameWrapper}>
 					<Link 
 						to={{
@@ -34,39 +39,46 @@ export default function Titlebar(props: TitlebarProps): ReactElement {
                 </div>
                 <div className={styles.buttonContainer}>
                     {props.routes.map((b, i) => {
-                        if (b === 'Preview') return <a
-							key={[b, i].join('.')}
-                            className={styles.button}
-                            href='http://beta.oxfordchess.co.uk'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            {b}
-                        </a>
-                        /*if (b === 'Downloads') return <a
-                            className={styles.button}
-                            href='http://repo.oxfordchess.co.uk'
-                            target='_blank'
-                            rel='nooopener noreferrer'
-                        >
-                            {b}
-                        </a>*/
-                        return <Link
-							key={[b, i].join('.')}
-                            className={styles.button}
-							onClick={() => props.setID(b)}
-							to={{
-								pathname: '/' + b.toLowerCase(),
-								state: {
-									from: window.location.pathname
-								}
-							}}
-                        >
-                            {b}
-                        </Link>
+                        return <>
+							<Link
+								key={[b, i].join('.')}
+								className={styles.button}
+								onClick={() => props.setID(b)}
+								to={{
+									pathname: '/' + b.toLowerCase(),
+									state: {
+										from: window.location.pathname
+									}
+								}}
+							>
+								{b}
+							</Link>
+						</>
                     })}
                 </div>
             </>}
         </div>
-    );
+		<div className={styles.mobileMenu} style={{
+			maxHeight: mobileMenu ? '100%' : '0px'
+		}}>
+			<div style={{ height: '26vh' }} />
+			{['Home', ...props.routes].map((b, i) => {
+					return <>
+					<Link
+						key={[b, i].join('.')}
+						className={styles.button}
+						onClick={() => setMenu(false)}
+						to={{
+							pathname: b === 'Home' ? '/' : '/' + b.toLowerCase(),
+							state: {
+								from: window.location.pathname
+							}
+						}}
+					>
+						{b}
+					</Link>
+				</>
+			})}
+		</div>
+    </>;
 }

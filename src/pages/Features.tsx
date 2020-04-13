@@ -38,6 +38,10 @@ const FeatureList = {
 			level: 0
 		},
 		{
+			name: 'Game point totals',
+			level: 0
+		},
+		{
 			name: 'Custom win / loss / draw / bye match points',
 			level: 0
 		},
@@ -172,18 +176,20 @@ export default function Features() {
 	return (
 		<>
 			<section id='highlights' className={styles.container}>
-				<TextGallery autoAdvance={3000}>
+				<TextGallery
+					autoAdvance={5000}
+				>
 					<div>
 						<h3>Modern</h3>
 						<p>Built with the latest front-end technologies and constantly updated. Designed to work on any platform. Syncs instanteously across platforms to make life as easy as possible for you. </p>
 					</div>
 					<div>
 						<h3>Functional</h3>
-						<p>Gone are the days of a single-use "my-way only" platform. The <span className='bold'>Tournament</span> Suite seeks to let you, the tournament creator, run things the way you want, providing as many different options as possible to suit your needs.</p>
+						<p>Gone are the days of a single-use "my-way only" platform. The <span className='bold'>Tournament</span> suite lets you, the tournament creator, run things the way you want, providing as many different options as possible to suit your needs.</p>
 					</div>
 					<div>
 						<h3>Intuitive</h3>
-						<p>Tournament seeks to place everything right where you expect. Any feature you might be looking for there is there, right when you need it. We make running tournaments an actual pleasure for you.</p>
+						<p>Tournament seeks to place everything right where you expect. Any feature you might be looking for is there, right when you need it. We make running tournaments a pleasure for you.</p>
 					</div>
 				</TextGallery>
 			</section>
@@ -192,7 +198,7 @@ export default function Features() {
 					Features
 				</a>
 				<div className={styles.subtitle}>
-					Every feature is modular. That means you can toggle which ones you want for your tournament across a number of different settings. Really design your tournament for the way you have in mind.
+					Every feature is modular. That means you can toggle which ones you want for your tournament across a number of different settings. Really design your tournament the way you want it.
 				</div>
 				<div className='description'>
 					Control your tournament with <span className='bold'>Tournament Director</span>.<br />Get the ability to publish your results to <span className='bold'>Results</span> automatically thrown in.
@@ -204,8 +210,8 @@ export default function Features() {
 								<tr className={styles.section}>
 									<th colSpan={4}>{section}</th>
 								</tr>
-								<tr>
-									<th></th>
+								<tr className={styles.license}>
+									<th><div className={styles.spacer}>{'\u200b'}</div></th>
 									<th scope='col' style={{width: '15%'}}>Free</th>
 									<th scope='col' style={{width: '15%'}}>Trial</th>
 									<th scope='col' style={{width: '15%'}}>Licensed</th>

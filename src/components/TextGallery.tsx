@@ -1,4 +1,5 @@
 import React, { ReactElement, useState, useEffect, useReducer, useCallback } from 'react';
+import styles from '../css/components.module.css';
 
 interface TextGalleryProps {
     children?: JSX.Element[]
@@ -19,7 +20,7 @@ export default function TextGallery(props: TextGalleryProps): ReactElement {
     for (let i = 0; i < children.length; i++) {
         dots.push(<span
             key={['textGallery', 'dot', i].join('.')}
-            className={['dot', i === index ? 'dotSelected' : ''].join(' ')}
+            className={[styles.dot, i === index ? styles.dotSelected : ''].join(' ')}
             onClick={() => {
                 setIndex(i);
                 setHasClicked(true);
@@ -39,13 +40,13 @@ export default function TextGallery(props: TextGalleryProps): ReactElement {
     useEffect(updateIndex, [updateIndex]);
 
     return (
-        <div className='textGallery'>
-            <div className='stage' style={{
-                left: `calc(-100% * ${index})`
+        <div className={styles.textGallery}>
+            <div className={styles.stage} style={{
+                left: `calc(-100vw * ${index})`
             }}>
                 {children.map((c, i) => <div key={['textGallery', 'child', i].join('.')}>{c}</div>)}
             </div>
-            <div className='selection'>
+            <div className={styles.selection}>
                 {dots}
             </div>
         </div>

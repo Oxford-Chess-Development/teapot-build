@@ -1,10 +1,22 @@
 .container {
-	background-color: rgba(80, 5, 5, 0.68);
 	display: flex;
 	align-items: center;
 	padding: 50px;
 	flex-direction: column;
 }
+
+.container:global(#author) {
+	background-color: rgba(80, 5, 5, 0.9);
+}
+
+.container:global(#development) {
+	background-color: rgba(50, 50, 50, 0.68);
+}
+
+.container:global(#contact) {
+	background-color: rgba(0, 50, 0, 0.68);
+}
+
 
 .container > * {
 	width: 100%;
@@ -12,10 +24,18 @@
 	margin: 20px 0;
 }
 
+.container a:link, .container a:visited, .container a:hover, .container a:active {
+	text-emphasis: none;
+	font-weight: bold;
+	text-decoration: none;
+	color: inherit;
+}
+
 .title {
 	font-size: xx-large;
 	font-weight: bolder;
 	margin: 5px 0;
+	text-decoration: none;
 }
 
 .subtitle {

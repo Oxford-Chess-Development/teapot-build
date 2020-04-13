@@ -6,7 +6,7 @@
 }
 
 .container:global(#story) {
-	background-color: rgba(80, 5, 5, 0.8);
+	background-color: rgba(80, 5, 5, 0.94);
 }
 
 .container:global(#author) {
@@ -26,6 +26,8 @@
 	width: 100%;
 	max-width: 980px;
 	margin: 20px 0;
+	font-weight: 300;
+	line-height: 1.5em;
 }
 
 .container a:link, .container a:visited, .container a:hover, .container a:active {

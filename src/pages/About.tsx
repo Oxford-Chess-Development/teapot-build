@@ -13,8 +13,8 @@ export default function About(): ReactElement {
 			</a>
 			<div className='quote'>
 				<FaQuoteLeft className={styles.leftQuote} />
-				<p>As a keen chess player myself and having organised many a chess tournament for the university club, I often found myself frustrated. Any existing software is too outdated, never user-friendly, especially to non-professionals, and simply lacking in ideas. When I first joined the club, we tried to resurrect the annual 'Cuppers' tournament, an afternoon amateur college rapidplay. The competition was nearly derailed by slow pairing times. There is so much technology available to us and its all so powerful. We shouldn't have to be stuck in the boring logistics which distract from the incredible game that is chess.</p>
-				<p>Tournament modernises organising tournaments and make the whole process easy and enjoyable. I've created a platform that's easy to use, filled with features, and innovative, using the latest in app and website technology to its fullest potential. Chess players shouldn't have to settle for anything less.</p>
+				<p>As a keen chess player myself and having organised many chess tournaments for the university club, I often found myself frustrated. Existing software is too outdated, never user-friendly especially to non-professionals, and simply lacking in ideas. When I first joined the club, we tried to resurrect the annual 'Cuppers' tournament, an afternoon amateur college rapidplay. The competition was nearly derailed by slow pairing times. There is so much technology available to us and it's all so powerful. We shouldn't have to be stuck in the boring logistics which distract from the incredible game that is chess.</p>
+				<p><span className='bold'>Tournament</span> modernises organisation and make the whole process easy and enjoyable. I've created a platform that is easy to use, filled with features, and innovative, using the latest in app and website technology to its fullest potential. Chess players shouldn't have to settle for anything less.</p>
 				<FaQuoteRight className={styles.rightQuote} />
 			</div>
 			<img className={styles.signature} src={signature} alt='signature' />
@@ -25,7 +25,7 @@ export default function About(): ReactElement {
 			</a>
 			<div>
 				<p>Oxford Chess Development is the sole work of Aloysius Lip, a 2nd-year undergraduate student at the University of Oxford and the current President of the Oxford University Chess Club. He reads Philosophy, Politics, and Economics, specialising in Microeconomics, Public Economics, and Game Theory.</p>
-				<p>He enjoys programming in his free time, having won the international coding competition in 2018. His previous projects, viewable on his <a href='https://aloysiuslip.com' rel='noopener noreferrer' target='_blank'>personal website</a> in the world of chess development have included:</p>
+				<p>He enjoys programming in his free time, having won the international coding competition in 2018. His previous projects in the world of chess development, viewable on his <a href='https://aloysiuslip.com' rel='noopener noreferrer' target='_blank'>personal website</a>, have included:</p>
 				<table>
 					<tbody>
 						<tr>

@@ -16,8 +16,13 @@
     text-decoration: none;
 }
 
+.container:global(#intro) {
+	background-color: rgba(29, 29, 29, 0.85);
+	text-shadow: 1px 1px 2px black;
+}
+
 .container:global(#tournament-director) {
-	background-color: rgba(11, 11, 11, 0.68);
+	background-color: rgba(11, 11, 11, 0.9);
 	text-shadow: 1px 1px 2px black;
 }
 
@@ -60,4 +65,17 @@ div:global(.main) .container > .subtitle {
 
 .container:global(#results) .subtitle, .container:global(#mobile) .subtitle {
 	font-weight: 300;
+}
+
+.description {
+	font-weight: 300;
+	line-height: 1.5em;
+}
+
+.description li {
+	text-align: left;
+}
+
+div:global(.main) section.container .download {
+	font-weight: bold;
 }

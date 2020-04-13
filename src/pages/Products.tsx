@@ -2,11 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Album, { Img } from '../components/Image';
 import styles from '../css/products.module.css';
+import { FaWindows, FaApple, FaLinux } from 'react-icons/fa';
 
 export default function Products() {
 
 	return (
 		<>
+			<section id='intro' className={styles.container}>
+				<div className={styles.description}>
+					There are three programs in the <span className='bold'>Tournament</span> suite.<br />
+					<ul>
+						<li><a href='#tournament-director'>Tournament Director</a>, your software to manage tournaments, is a Desktop and Web app.</li>
+						<li><a href='#results'>Results</a> is the public-facing site where you can publish pairings players' and spectators' convenience.</li>
+						<li><a href='#mobile'>Mobile</a> is an app serving live personalised information to your players during physical tournaments.</li>
+					</ul>
+					Your license to <span className='bold'>Tournament</span> automatically includes the functions to <a href='#results' className='bold'>Results</a> and <a href='#mobile' className='bold'>Mobile</a>.
+				</div>
+			</section>
 			<section id='tournament-director' className={styles.container}>
 				<a href='#tournament-director' className={styles.title}>
 					Tournament Director
@@ -33,28 +45,27 @@ export default function Products() {
 				<div>
 					<p>Your one-touch platform to manage tournaments that's visual, filled with functions, and intuitive to use.</p>
 					<p>See all the features available in the Desktop app over at the <Link className='bold' to={{
-						pathname:'/features',
+						pathname: '/features',
 						state: {
 							from: '/products'
 						}
 					}}>Features</Link> page</p>
-					<p>Your license to <span className='bold'>Tournament</span> automatically includes the functions to beam your tournaments to <a href='#results' className='bold'>Results</a> and <a href='#mobile' className='bold'>Mobile</a> for all your players and spectators.</p>
 				</div>
 
 				<div className={'buttonSection'}>
-					<a className={['web', 'download'].join(' ')} href='https://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>
+					<a className={['web', 'download', styles.download].join(' ')} href='https://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>
 						Open Web App
 					</a>
 				</div>
 				<div className={'buttonSection'}>
 					<a className={['platform', 'download'].join(' ')} href={`http://repo.oxfordchess.co.uk/latest/windows.html`} target='_blank' rel='noopener noreferrer'>
-						Windows
+						<FaWindows />Windows
 					</a>
 					<a className={['platform', 'download'].join(' ')} href={`http://repo.oxfordchess.co.uk/latest/mac.html`} target='_blank' rel='noopener noreferrer'>
-						Mac
+						<FaApple />Mac
 					</a>
 					<a className={['platform', 'download'].join(' ')} href={`http://repo.oxfordchess.co.uk/latest/ubuntu.html`} target='_blank' rel='noopener noreferrer'>
-						Linux
+						<FaLinux />Linux
 					</a>
 				</div>
 				<a href='http://repo.oxfordchess.co.uk' target='_blank' rel='noopener noreferrer' className={styles.subtitle}>

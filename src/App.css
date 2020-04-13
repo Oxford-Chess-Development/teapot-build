@@ -31,6 +31,12 @@
 	height: 100%;
 }
 
+@media only screen and (max-width: 700px) {
+	.main section:first-child {
+		padding-top: calc(50px + 5vh);
+	}
+}
+
 .normal {
 	font-weight: normal;
 }

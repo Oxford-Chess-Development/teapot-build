@@ -1,0 +1,87 @@
+.container {
+	display: flex;
+	align-items: center;
+	padding: 50px;
+	flex-direction: column;
+}
+
+.container > * {
+	width: 100%;
+	max-width: 980px;
+	margin: 20px 0;
+}
+
+.container a:link, .container a:visited, .container a:hover, .container a:active {
+	color: inherit;
+	font-weight: bold;
+	text-emphasis: none;
+    text-decoration: none;
+}
+
+.container:global(#highlights) {
+	background-color: rgba(255, 140, 0, 0.8);
+	text-shadow: 1px 1px 2px black;
+}
+
+.container:global(#features) {
+	background-color: rgba(100, 0, 0, 0.8);
+}
+
+.title {
+	font-size: xx-large;
+	font-weight: bolder;
+	margin: 5px 0;
+}
+
+.subtitle {
+	font-weight: lighter;
+}
+
+.container table {
+	width: 100%;
+}
+
+.container table tr {
+	width: 100%;
+}
+
+.container table thead tr.section {
+    background-color: rgba(0, 25, 0, 0.8);
+}
+
+.container table thead tr {
+    background-color: rgba(0, 0, 50, 0.8);
+	text-shadow: 1px 1px 2px black;
+}
+
+.container table > tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 200, 0.2);
+}
+
+.container table > tbody tr:nth-child(odd) td:hover {
+    background-color: rgba(255, 255, 200, 0.5);
+}
+
+.container table > tbody tr:nth-child(even) {
+    background-color: rgba(255, 200, 255, 0.2);
+}
+
+.container table > tbody tr:nth-child(even) td:hover {
+    background-color: rgba(255, 200, 200, 0.5);
+}
+
+.container table > * > tr > * {
+	padding: 5px 1em
+}
+
+tr.entry th {
+	text-align: left;
+	font-weight: normal;
+	font-size: 16px;
+	min-height: 34px;
+}
+
+.container table > tbody > tr > td.dev {
+	font-size: 12px;
+	padding: 10px 0;
+}

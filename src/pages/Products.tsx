@@ -119,11 +119,6 @@ export default function Products() {
 					<p>Designed for <span className='bold'>physical tournaments</span>. Have a waiting room filled with thousands of anxious parents or players spread across rooms and all wondering what time the next round is going to start? Instantly beam your announcements, your round times, and your pairings to all your players.</p>
 					<p className='underlined'>Development on the mobile app has been put on hold and re-prioritised to other products on account of the global pause on in-person chess tournaments.</p>
 				</div>
-				<div className={'buttonSection'}>
-					<a className={['web', 'download'].join(' ')} href='https://results.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>
-						View mobile design
-					</a>
-				</div>
 			</section>
 			<section id='workflow' className={styles.container}>
 				<a href='#workflow' className={styles.title}>

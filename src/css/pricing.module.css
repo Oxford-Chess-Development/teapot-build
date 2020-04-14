@@ -57,3 +57,16 @@ div.priceButton > a {
 	background-color: gold;
 	width: 100%;
 }
+
+.description {
+	font-weight: 300;
+	line-height: 1.5em;
+	background-color: rgba(0, 50, 0, 0.8);
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+.notice {
+	font-style: italic;
+}

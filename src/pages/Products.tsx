@@ -13,18 +13,18 @@ export default function Products() {
 					Overview
 				</a>
 				<div className={styles.description}>
-					There are three programs in the <span className='bold'>Tournament</span> suite.<br />
+					There are three programs in the <span className='highlighted'>scorch</span>chess suite.<br />
 					<ul>
-						<li><a href='#tournament-director'>Tournament Director</a>, your software to manage tournaments, is a Desktop and Web app.</li>
-						<li><a href='#results'>Results</a> is the public-facing site where you can publish pairings players' and spectators' convenience.</li>
-						<li><a href='#mobile'>Mobile</a> is an app serving live personalised information to your players during physical tournaments.</li>
+						<li><a href='#app'>scorchapp</a>, your software to manage tournaments, is a Desktop and Web app.</li>
+						<li><a href='#results'>scorchresults</a> is the public-facing site where you can publish pairings players' and spectators' convenience.</li>
+						<li><a href='#mobile'>scorchmobile</a> is an app serving live personalised information to your players during physical tournaments.</li>
 					</ul>
-					Your license to <span className='bold'>Tournament</span> automatically includes the functions to <a href='#results' className='bold'>Results</a> and <a href='#mobile' className='bold'>Mobile</a>.
+					Your license to <a href='#app'>scorchapp</a> automatically includes the functions to <a href='#results'>scorchresults</a> and <a href='#mobile' className='bold'>scorchmobile</a>.
 				</div>
 			</section>
-			<section id='tournament-director' className={styles.container}>
-				<a href='#tournament-director' className={styles.title}>
-					Tournament Director
+			<section id='app' className={styles.container}>
+				<a href='#app' className={styles.title}>
+					scorchapp
 				</a>
 				<div className={styles.subtitle}>
 					Cross-platform Desktop app to manage tournaments. Also available in web view.
@@ -77,7 +77,7 @@ export default function Products() {
 			</section>
 			<section id='results' className={styles.container}>
 				<a href='#results' className={styles.title}>
-					Results
+					scorchresults
 				</a>
 				<div className={styles.subtitle}>
 					Universal web view for results and pairings. Attractive. Automated. Effortless.
@@ -110,7 +110,7 @@ export default function Products() {
 			</section>
 			<section id='mobile' className={styles.container}>
 				<a href='#mobile' className={styles.title}>
-					Mobile
+					scorchmobile
 				</a>
 				<div className={styles.subtitle}>
 					Your companion to real-life tournaments. Send messages to any player, anywhere.

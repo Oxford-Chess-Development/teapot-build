@@ -6,7 +6,7 @@
 }
 
 .App {
-	background-image: url('/images/cover-plain.jpg');
+	background-image: url('/images/background.jpeg');
 	background-repeat: no-repeat;
 	background-color: #111111;
 	background-position: 50%;
@@ -39,6 +39,10 @@
 
 .normal {
 	font-weight: normal;
+}
+
+.highlighted {
+	color: gold;
 }
 
 .bold {

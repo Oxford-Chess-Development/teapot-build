@@ -4,7 +4,7 @@ import styles from '../css/features.module.css';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const FeatureList = {
-	'Tournament Director': [
+	scorchapp: [
 		{
 			name: 'Swiss system pairings',
 			level: 0
@@ -82,7 +82,7 @@ const FeatureList = {
 			level: 2
 		}
 	],
-	Results: [
+	scorchresults: [
 		{
 			name: 'Pairings and results table',
 			level: 0
@@ -143,7 +143,7 @@ const FeatureList = {
 			level: 2
 		}
 	],
-	'Mobile (at alpha-testing stage)': [
+	scorchmobile: [
 		{
 			name: 'Personalised \'match\' view with opponent / game details',
 			level: 0
@@ -185,11 +185,11 @@ export default function Features() {
 					</div>
 					<div>
 						<h3>Functional</h3>
-						<p>Gone are the days of a single-use "my-way only" platform. The <span className='bold'>Tournament</span> suite lets you, the tournament creator, run things the way you want, providing as many different options as possible to suit your needs.</p>
+						<p>Gone are the days of a single-use "my-way only" platform. The <span className='highlighted'>scorch</span>chess suite lets you, the tournament creator, run things the way you want, providing as many different options as possible to suit your needs.</p>
 					</div>
 					<div>
 						<h3>Intuitive</h3>
-						<p>Tournament seeks to place everything right where you expect. Any feature you might be looking for is there, right when you need it. We make running tournaments a pleasure for you.</p>
+						<p>Scorch seeks to place everything right where you expect. Any feature you might be looking for is there, right when you need it. We make running tournaments a pleasure for you.</p>
 					</div>
 				</TextGallery>
 			</section>
@@ -201,7 +201,7 @@ export default function Features() {
 					Every feature is modular. That means you can toggle which ones you want for your tournament across a number of different settings. Really design your tournament the way you want it.
 				</div>
 				<div className='description'>
-					Control your tournament with <span className='bold'>Tournament Director</span>.<br />Get the ability to publish your results to <span className='bold'>Results</span> automatically thrown in.
+					Control your tournament with <span className='bold'>scorchapp</span>.<br />Get the ability to publish your results to <span className='bold'>scorchresults</span> automatically thrown in.
 				</div>
 				{Object.entries(FeatureList).map(([section, entries]) => {
 					return <div>

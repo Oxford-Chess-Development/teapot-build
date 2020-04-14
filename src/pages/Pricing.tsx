@@ -33,7 +33,7 @@ export default function Pricing() {
 				</div>
 			</div>
 			<div className={styles.description}>
-				<p>What does the <span className='bold'>in beta</span> status of this software mean? New features are constantly being built. That means you can access the <span className='bold'>Tournament Suite</span> for a reduced price. You will be in constant contact with the creator, <Link to='/about#author'>Aloysius</Link>, who will listen to any suggestions you have for features. Average turnaround for a new feature is within a week. In return, you should report any bugs you find.</p>
+				<p>What does the <span className='bold'>in beta</span> status of this software mean? New features are constantly being built. That means you can access the <span className='highlighted'>scorch</span>chess for a reduced price. You will be in constant contact with the creator, <Link to='/about#author'>Aloysius</Link>, who will listen to any suggestions you have for features. Average turnaround for a new feature is within a week. In return, you should report any bugs you find.</p>
 				<p><span className={styles.notice}>Beta status will likely last throughout the month of April.</span></p>
 			</div>
 		</section>

@@ -34,7 +34,7 @@ export default function Titlebar(props: TitlebarProps): ReactElement {
 							}
 						}}
 						className={styles.name}>
-                        <span className={'bold'}>Tournament</span> by Oxford Chess Development
+                        <span className={['highlighted'].join(' ')}>scorch</span>chess
                     </Link>
                 </div>
                 <div className={styles.buttonContainer}>

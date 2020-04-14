@@ -8,7 +8,10 @@ export default function Products() {
 
 	return (
 		<>
-			<section id='intro' className={styles.container}>
+			<section id='overview' className={styles.container}>
+				<a href='#overview' className={styles.title}>
+					Overview
+				</a>
 				<div className={styles.description}>
 					There are three programs in the <span className='bold'>Tournament</span> suite.<br />
 					<ul>

@@ -9,6 +9,11 @@
 	max-width: 980px;
 }
 
+.container:global(#overview) > div {
+	width: 100%;
+	margin-top: 20px;
+}
+
 .container a:link, .container a:visited, .container a:hover, .container a:active {
 	color: inherit;
 	font-weight: bold;
@@ -16,7 +21,7 @@
     text-decoration: none;
 }
 
-.container:global(#intro) {
+.container:global(#overview) {
 	background-color: rgba(29, 29, 29, 0.85);
 	text-shadow: 1px 1px 2px black;
 }

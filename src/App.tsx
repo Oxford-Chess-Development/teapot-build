@@ -5,6 +5,7 @@ import Titlebar from './components/Titlebar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
+import Pricing from './pages/Pricing';
 import Features from './pages/Features';
 import About from './pages/About';
 import { StaticContext } from 'react-router';
@@ -21,11 +22,12 @@ export function scrollToID( id: string) {
     });
 }
 
-const routes = ['Products', 'Features', 'About'];
+const routes = ['Products', 'Features', 'Pricing', 'About'];
 const components = {
 	home: Home,
 	products: Products,
 	features: Features,
+	pricing: Pricing,
 	about: About
 } as {[key: string]: (props?: RouteComponentProps<any, StaticContext, any>) => ReactElement}
 

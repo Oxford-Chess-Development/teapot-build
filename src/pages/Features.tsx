@@ -85,45 +85,45 @@ const FeatureList = {
 	scorchresults: [
 		{
 			name: 'Pairings and results table',
-			level: 0
+			level: 1
 		},
 		{
 			name: 'Standings table',
-			level: 0
+			level: 1
 		},
 		{
 			name: 'Performance and expected score trackers',
-			level: 0
+			level: 1
 		},
 		{
 			name: 'Charts showing performance and standings over time',
-			level: 0
+			level: 1
 		},
 		{
 			name: 'Chart showing easy breakdown of in progress games',
-			level: 0
+			level: 1
 		},
 		{
 			name: 'Publish round times',
-			level: 0
+			level: 1
 		},
 		{
 			name: 'Automatic game links from Chess.com',
-			level: 0
+			level: 1
 		},
 		{
 			name: 'Automatic game links from Lichess.org',
-			level: 0,
+			level: 1,
 			dev: true
 		},
 		{
 			name: 'Automatic results submission from Chess.com and Lichess.org',
-			level: 0,
+			level: 1,
 			dev: true
 		},
 		{
 			name: 'Results submission from users',
-			level: 0,
+			level: 1,
 			dev: true
 		},
 		{

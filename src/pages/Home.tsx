@@ -18,7 +18,7 @@ export default function Home(): ReactElement {
 			<div><h1>A modern platform for organisers of chess tournaments.</h1></div>
 			<div className={styles.description}>
 				Organising chess tournaments should be easy, intuitive, and individually tailored to you.
-				<br />Synced across desktop, web, and mobile, <span className='bold'><span className='highlighted'>scorch</span>chess</span> offers everything to run chess tournament your way, providing the most effortless experience for yourself, your players, and your spectators.
+				<br />Synced across desktop, web, and mobile, <span className='bold'>scorchchess</span> offers everything to run chess tournament your way, providing the most effortless experience for yourself, your players, and your spectators.
 			</div>
 			<div className={'buttonSection'}>
 				{OSName !== 'unknown' ? <a className={['platform', 'download'].join(' ')} href={`http://repo.oxfordchess.co.uk/latest/${OSName}.html`} target='_blank' rel='noopener noreferrer'>

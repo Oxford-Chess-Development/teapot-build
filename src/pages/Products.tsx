@@ -56,22 +56,22 @@ export default function Products() {
 				</div>
 
 				<div className={'buttonSection'}>
-					<a className={['web', 'download', styles.download].join(' ')} href='https://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>
+					<a className={['web', 'download', styles.download].join(' ')} href='https://beta.scorchapp.co.uk/' target='_blank' rel='noopener noreferrer'>
 						Open Web App
 					</a>
 				</div>
 				<div className={'buttonSection'}>
-					<a className={['platform', 'download'].join(' ')} href={`http://repo.oxfordchess.co.uk/latest/windows.html`} target='_blank' rel='noopener noreferrer'>
+					<a className={['platform', 'download'].join(' ')} href={`http://repo.scorchapp.co.uk/latest/windows.html`} target='_blank' rel='noopener noreferrer'>
 						<FaWindows />Windows
 					</a>
-					<a className={['platform', 'download'].join(' ')} href={`http://repo.oxfordchess.co.uk/latest/mac.html`} target='_blank' rel='noopener noreferrer'>
+					<a className={['platform', 'download'].join(' ')} href={`http://repo.scorchapp.co.uk/latest/mac.html`} target='_blank' rel='noopener noreferrer'>
 						<FaApple />Mac
 					</a>
-					<a className={['platform', 'download'].join(' ')} href={`http://repo.oxfordchess.co.uk/latest/ubuntu.html`} target='_blank' rel='noopener noreferrer'>
+					<a className={['platform', 'download'].join(' ')} href={`http://repo.scorchapp.co.uk/latest/ubuntu.html`} target='_blank' rel='noopener noreferrer'>
 						<FaLinux />Linux
 					</a>
 				</div>
-				<a href='http://repo.oxfordchess.co.uk' target='_blank' rel='noopener noreferrer' className={styles.subtitle}>
+				<a href='http://repo.scorchapp.co.uk' target='_blank' rel='noopener noreferrer' className={styles.subtitle}>
 					View all downloads
 				</a>
 			</section>
@@ -99,11 +99,11 @@ export default function Products() {
 					/>
 				</div>
 				<div>
-					<p>Choose to make your tournament public? All your results and pairings are immediately live-synced to our  <a href='https://results.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>website</a>.</p>
+					<p>Choose to make your tournament public? All your results and pairings are immediately live-synced to our  <a href='https://results.scorchapp.co.uk/' target='_blank' rel='noopener noreferrer'>website</a>.</p>
 					<p>Instantly view your pairings, standings, and tournament statistics in one beautiful web view, on computer or mobile.</p>
 				</div>
 				<div className={'buttonSection'}>
-					<a className={['web', 'download'].join(' ')} href='https://results.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>
+					<a className={['web', 'download'].join(' ')} href='https://results.scorchapp.co.uk/' target='_blank' rel='noopener noreferrer'>
 						Open Results Site
 					</a>
 				</div>

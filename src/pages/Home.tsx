@@ -21,10 +21,10 @@ export default function Home(): ReactElement {
 				<br />Synced across desktop, web, and mobile, <span className='bold'>scorchchess</span> offers everything to run chess tournament your way, providing the most effortless experience for yourself, your players, and your spectators.
 			</div>
 			<div className={'buttonSection'}>
-				{!isMobile() && OSName !== 'unknown' ? <a className={['platform', 'download'].join(' ')} href={`http://repo.oxfordchess.co.uk/latest/${OSName}.html`} target='_blank' rel='noopener noreferrer'>
+				{!isMobile() && OSName !== 'unknown' ? <a className={['platform', 'download'].join(' ')} href={`http://repo.scorchapp.co.uk/latest/${OSName}.html`} target='_blank' rel='noopener noreferrer'>
 					Download for {capitalise(OSName === 'ubuntu' ? 'linux' : OSName)}
 				</a> : null}
-				{!isMobile() ? <a className={['web', 'download'].join(' ')} href='https://beta.oxfordchess.co.uk/' target='_blank' rel='noopener noreferrer'>
+				{!isMobile() ? <a className={['web', 'download'].join(' ')} href='https://beta.scorchapp.co.uk/' target='_blank' rel='noopener noreferrer'>
 					Open Web App
 				</a> : null}
 			</div>

@@ -15,7 +15,7 @@ export default function Pricing() {
 					<div>£0</div>
 					<div>Experience the software</div>
 					<div>All 3 products</div>
-					<a href='https://beta.oxfordchess.co.uk' target='_blank' rel='noopener noreferrer'>Create account</a>
+					<a href='https://beta.scorchapp.co.uk' target='_blank' rel='noopener noreferrer'>Create account</a>
 				</div>
 				<div className={['download', 'platform', styles.priceButton].join(' ')}>
 					<div className='bold'>Trial</div>

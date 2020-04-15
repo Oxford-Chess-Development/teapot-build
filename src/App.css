@@ -31,9 +31,23 @@
 	height: 100%;
 }
 
+.main > section, .main > div {
+    flex: 0 1 auto;
+	flex-shrink: 0;
+}
+
 @media only screen and (max-width: 700px) {
 	.main section:first-child {
 		padding-top: calc(50px + 5vh);
+	}
+	.App {
+		display: flex;
+		flex-direction: column;
+	}
+	@supports not ((display: flex) or (display: grid)) {
+		.main {
+			display: flex;
+		}
 	}
 }
 

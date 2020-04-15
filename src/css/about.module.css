@@ -5,8 +5,13 @@
 	flex-direction: column;
 }
 
-.container:global(#story) {
+
+.container:global(#reviews) {
 	background-color: rgba(80, 5, 5, 0.94);
+}
+
+.container:global(#story) {
+	background-color: rgba(5, 30, 5, 0.94);
 }
 
 .container:global(#author) {
@@ -22,12 +27,19 @@
 }
 
 
-.container > div {
+.container:not(:global(#reviews)) > div {
 	width: 100%;
 	max-width: 980px;
+}
+
+.container > div {
 	margin: 20px 0;
 	font-weight: 300;
 	line-height: 1.5em;
+}
+
+div.author {
+	font-weight: 500;
 }
 
 .container a:link, .container a:visited, .container a:hover, .container a:active {

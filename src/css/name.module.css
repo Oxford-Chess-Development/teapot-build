@@ -11,6 +11,12 @@
 	margin: 40px 0;
 }
 
+@media only screen and (max-width: 700px) {
+	.text {
+		font-size: 24px;
+	}
+}
+
 .text > div {
 	position: relative;
 	overflow: hidden;
@@ -51,6 +57,17 @@
 	}
 	to {
 		max-width: 0px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	@keyframes expand {
+		from {
+			max-width: 0px;
+		}
+		to {
+			max-width: 18ch;
+		}
 	}
 }
 

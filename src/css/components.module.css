@@ -36,6 +36,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		padding-inline-start: 0px;
+		right: 172px;
 	}
 	div:global(.carousel) div:global(.thumbs-wrapper) button {
 		display: none;

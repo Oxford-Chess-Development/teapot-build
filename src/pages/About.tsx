@@ -3,10 +3,29 @@ import { ReactElement } from 'react';
 import styles from '../css/about.module.css';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import { signature } from './signature';
+import TextGallery from '../components/TextGallery';
 
 export default function About(): ReactElement {
 
 	return <>
+		<section id='reviews' className={styles.container}>
+			<a href='reviews' className={styles.title}>
+				Reviews
+			</a>
+			<TextGallery
+				autoAdvance={5000}
+			>
+				{[<div className='quote'>
+					<FaQuoteLeft className={styles.leftQuote} />
+					<p>I was extremely lucky to be able to use Scorch and nearly missed the opportunity. That would have been a massive mistake so I urge everyone else not to make it.</p>
+					<p>A different league to anything else out there, and the potential for further development is frighteningly exciting, really look forward to be following its journey and using the platform along the way!"</p>
+					<FaQuoteRight className={styles.rightQuote} />
+					<div className={styles.author}>
+						Peter Hornsby, Founder and Tournament Director of <a href='https://2020chess.com' target='_blank' rel='noopener noreferrer'>2020Chess</a>
+					</div>
+				</div>]}
+			</TextGallery>
+		</section>
 		<section id='story' className={styles.container}>
 			<a href='#story' className={styles.title}>
 				Story
@@ -66,9 +85,9 @@ export default function About(): ReactElement {
 			</div>
 		</section>
 		<section id='contact' className={styles.container}>
-			<div className={styles.title}>
+			<a href='#contact' className={styles.title}>
 				Contact
-			</div>
+			</a>
 			<div>
 
 			<p>Leave any feedback from the beta deployment of <span className='highlighted'>Scorch</span> on <a className='inlineLink' href='https://github.com/Oxford-Chess-Development/toastie-desktop-build/issues' target='_blank' rel='noopener noreferrer'>GitHub</a>. It's super easy to make a GitHub account and you can track the progress on your requests as they're handled!</p>

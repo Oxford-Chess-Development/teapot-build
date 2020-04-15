@@ -8,7 +8,7 @@ export default function Footer(): ReactElement {
 	return (
 		<div className={styles.footer}>
 			<div className={styles.icons}>
-				<a href='https://facebook.com/scorchapp' target='_blank' rel='noopener noreferrer'>
+				<a href='https://facebook.com/scorchchess' target='_blank' rel='noopener noreferrer'>
 					<FaFacebook />
 				</a>
 				<a href='https://twitter.com/ChessOxford' target='_blank' rel='noopener noreferrer'>

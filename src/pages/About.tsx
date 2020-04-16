@@ -18,7 +18,7 @@ export default function About(): ReactElement {
 				{[<div className='quote'>
 					<FaQuoteLeft className={styles.leftQuote} />
 					<p>I was extremely lucky to be able to use Scorch and nearly missed the opportunity. That would have been a massive mistake so I urge everyone else not to make it.</p>
-					<p>A different league to anything else out there, and the potential for further development is frighteningly exciting, really look forward to be following its journey and using the platform along the way!"</p>
+					<p>A different league to anything else out there, and the potential for further development is frighteningly exciting, really look forward to be following its journey and using the platform along the way!</p>
 					<FaQuoteRight className={styles.rightQuote} />
 					<div className={styles.author}>
 						Peter Hornsby, Founder and Tournament Director of <a href='https://2020chess.com' target='_blank' rel='noopener noreferrer'>2020Chess</a>

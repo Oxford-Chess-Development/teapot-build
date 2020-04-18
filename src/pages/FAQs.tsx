@@ -4,7 +4,15 @@ import styles from '../css/faqs.module.css';
 export default function FAQs() {
 
 	return (
-		<section>
+		<section className={styles.container}>
+			<div>
+				<div id='duplicate-names' className={styles.question}>
+					I have 2 players with the same now. What should I do?
+				</div>
+				<div className={styles.answer}>
+					<span className='bold'>ScorchApp</span> automatically rejects duplicate names on player entry or edit. This is to catch mistakes busy tournament organisers might make. If you want to switch this feature off, go to Settings > Permissions > Check for duplicate players and switch it to 'Off'. You can switch it back on straight after you've entered your player with the same name!
+				</div>
+			</div>
 			<div>
 				<div id='performance-rating' className={styles.question}>
 					What are the performance rating options? which should I choose?
@@ -20,6 +28,8 @@ export default function FAQs() {
 						</li>
 					</ul>
 				</div>
+			</div>
+			<div>
 				<div id='ecf-performance-rating' className={styles.question}>
 					Why is there no 'ECF' performance rating option?
 				</div>

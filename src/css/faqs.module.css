@@ -1,9 +1,18 @@
 .container {
-	background-color: rgba(11, 11, 11, 0.8);
 	display: flex;
 	align-items: center;
-	padding: 50px;
+	padding: 0px 50px 50px 50px;
 	flex-direction: column;
+}
+.container:first-child {
+	padding: 50px;
+}
+
+.container a:link, .container a:visited, .container a:hover, .container a:active {
+	color: inherit;
+	font-weight: bold;
+	text-emphasis: none;
+    text-decoration: none;
 }
 
 .container a:link, .container a:visited, .container a:hover, .container a:active {
@@ -12,17 +21,49 @@
 	font-weight: bold;
 }
 
-.container > * {
-	margin: 20px 0;
-	max-width: 980px;
+.container:global(#header) {
+	background-color: rgba(11, 11, 50, 0.5);
 }
 
+.container:global(#scorchapp) {
+	background-color: rgba(11, 11, 11, 0.9);
+}
 
+.container > div {
+	margin: 20px 0;
+	max-width: 980px;
+	display: grid;
+	column-gap: 20px;
+	grid-template-columns: 1fr auto auto 1fr;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		'. question question version'
+		'answer answer answer answer';
+}
+
+.title {
+	font-size: xx-large;
+	font-weight: bolder;
+	margin: 5px 0;
+}
 .question {
 	font-weight: bold;
 	margin: 20px 0;
+	grid-area: question;
+}
+
+.version {
+	margin: 20px 0px;
+	grid-area: version;
+	font-weight: 200;
+	font-size: 12px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
 }
 
 .answer {
-	text-align: left;
+	text-align: justify;
+	grid-area: answer;
+	font-weight: 300;
 }

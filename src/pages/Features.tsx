@@ -10,6 +10,10 @@ const FeatureList = {
 			level: 0
 		},
 		{
+			name: 'Round-robin system pairings',
+			level: 0
+		},
+		{
 			name: 'Team and individual competitors',
 			level: 0
 		},
@@ -26,31 +30,7 @@ const FeatureList = {
 			level: 0
 		},
 		{
-			name: 'Change the number of rounds once started',
-			level: 0
-		},
-		{
-			name: 'Performance rating calculations',
-			level: 0
-		},
-		{
-			name: 'Expected score calculations',
-			level: 0
-		},
-		{
-			name: 'Game point totals',
-			level: 0
-		},
-		{
-			name: 'Custom win / loss / draw / bye match points',
-			level: 0
-		},
-		{
-			name: 'Live tournament statistics',
-			level: 0
-		},
-		{
-			name: 'Copy players from a spreadsheet',
+			name: 'Manual pairings (with validation)',
 			level: 0
 		},
 		{
@@ -66,11 +46,59 @@ const FeatureList = {
 			level: 0
 		},
 		{
+			name: 'Undo a pairing',
+			level: 0
+		},
+		{
+			name: 'Undo a whole round\'s pairings',
+			level: 0
+		},
+		{
+			name: 'Change the number of rounds once started',
+			level: 0
+		},
+		{
+			name: 'Performance rating calculations',
+			level: 0
+		},
+		{
+			name: 'Expected score calculations',
+			level: 0
+		},
+		{
+			name: 'Crosstable view',
+			level: 0
+		},
+		{
+			name: 'Game point totals',
+			level: 0
+		},
+		{
+			name: 'Custom win / loss / draw / bye match points',
+			level: 0
+		},
+		{
+			name: 'Custom win / loss / draw / bye game points',
+			level: 0
+		},
+		{
+			name: 'Live tournament statistics',
+			level: 0
+		},
+		{
+			name: 'Check player duplicates',
+			level: 0
+		},
+		{
+			name: 'Input players from a spreadsheet',
+			level: 0
+		},
+		{
 			name: 'More than 2 tournaments',
 			level: 1
 		},
 		{
-			name: 'More than 2 rounds in a tournament',
+			name: 'More than 3 rounds in a tournament',
 			level: 1
 		},
 		{

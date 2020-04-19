@@ -39,7 +39,6 @@ export default function Titlebar(props: TitlebarProps): ReactElement {
                 </div>
                 <div className={styles.buttonContainer}>
                     {props.routes.map((b, i) => {
-						if (b === 'FAQs') return null;
                         return <>
 							<Link
 								key={[b, i].join('.')}

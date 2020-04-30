@@ -22,6 +22,18 @@ const FeatureList = {
 			level: 0
 		},
 		{
+			name: 'Add players from the ECF database',
+			level: 0
+		},
+		{
+			name: 'Check player duplicates',
+			level: 0
+		},
+		{
+			name: 'Input players from a spreadsheet',
+			level: 0
+		},
+		{
 			name: 'Players joining and leaving halfway',
 			level: 0
 		},
@@ -51,6 +63,10 @@ const FeatureList = {
 		},
 		{
 			name: 'Undo a whole round\'s pairings',
+			level: 0
+		},
+		{
+			name: 'Give players "point bonuses"',
 			level: 0
 		},
 		{
@@ -86,11 +102,7 @@ const FeatureList = {
 			level: 0
 		},
 		{
-			name: 'Check player duplicates',
-			level: 0
-		},
-		{
-			name: 'Input players from a spreadsheet',
+			name: 'Custom backgrounds',
 			level: 0
 		},
 		{
